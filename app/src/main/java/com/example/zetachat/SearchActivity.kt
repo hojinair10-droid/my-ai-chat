@@ -55,9 +55,7 @@ class SearchActivity : AppCompatActivity() {
             val result = results[position]
             holder.title.text = result.title
             holder.description.text = result.description
-            // Note: item_search_result.xml currently doesn't have a category TextView.
-            // We'll need to update the layout or ignore for now.
-            // For simplicity, let's assume we add it later or use description for both.
+            holder.category.text = result.category
         }
 
         override fun getItemCount(): Int = results.size

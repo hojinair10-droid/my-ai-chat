@@ -2,50 +2,47 @@ package com.example.zetachat
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.zetachat.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
         // Set up button clicks
-        binding.btnChat.setOnClickListener {
+        findViewById<Button>(R.id.btnChat).setOnClickListener {
             val intent = Intent(this, ChatActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnImage.setOnClickListener {
+        findViewById<Button>(R.id.btnImage).setOnClickListener {
             val intent = Intent(this, ImageGenerationActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnFeed.setOnClickListener {
+        findViewById<Button>(R.id.btnFeed).setOnClickListener {
             val intent = Intent(this, FeedActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnSearch.setOnClickListener {
+        findViewById<Button>(R.id.btnSearch).setOnClickListener {
             val intent = Intent(this, SearchActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnRecommendations.setOnClickListener {
+        findViewById<Button>(R.id.btnRecommendations).setOnClickListener {
             val intent = Intent(this, RecommendationActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnHistory.setOnClickListener {
+        findViewById<Button>(R.id.btnHistory).setOnClickListener {
             val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnCharacterCreate.setOnClickListener {
+        findViewById<Button>(R.id.btnCharacterCreate).setOnClickListener {
             val intent = Intent(this, CharacterCreationActivity::class.java)
             startActivity(intent)
         }
